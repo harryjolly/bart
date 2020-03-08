@@ -1,8 +1,7 @@
 var context = document.getElementById("canvas")
 var ctx = context.getContext("2d")
 
-//to do eyes
-
+// this is the function for creating a circle
 function makeArc(a, b, c, d, fill = "") {
   ctx.beginPath();
   ctx.arc(a, b, c, d, 2 * Math.PI);
@@ -13,7 +12,16 @@ function makeArc(a, b, c, d, fill = "") {
   ctx.stroke();
 };
 
-// to do nose
+// this is the function for creating a unfinished circle I originally used this
+//to create the dimples
+function makeArc2(a, b, c, d, fill = "") {
+  ctx.beginPath();
+  ctx.arc(a, b, c, d, 2 * Math.PI);
+  ctx.fillStyle = fill;
+  ctx.fill();
+  ctx.lineWidth = 4;
+  ctx.stroke();
+};
 
 //this is the function for creating a semi circle
 function semicircle(a, b, c, d, fill = "") {
@@ -25,7 +33,10 @@ function semicircle(a, b, c, d, fill = "") {
   ctx.stroke();
 }
 
-// to do smile 
+// function to create a curved lineTo
+// I chose to use quadraticCurveTo instead of bezierCurveTo as there is
+// only one control point so it is easier for what I am intend to use the
+// function for
 
 function curvedline(x, y, a, b, c, d) {
   ctx.beginPath();
@@ -35,11 +46,14 @@ function curvedline(x, y, a, b, c, d) {
 
 }
 
-// to do dimples 
-
 // left eye
 makeArc(285, 355, 65, 0, "white");
 makeArc(288, 355, 10, 0, "black");
+
+//left dimple
+// I orginally used a unfinished circle function to create a dimple
+// but I found using a curved line was more effiecent
+// makeArc2(258, 505, 40, 5.7, "#ffd200") ;
 
 // nose
 // nose is positioned in the middle of both eyes so it overlaps
@@ -50,6 +64,7 @@ semicircle(202, 405, 40, 5.2, "#ffd200");
 // eye is positioned lower so the nose is overlapping
 makeArc(115, 355, 65, 0, "white");
 makeArc(112, 355, 10, 0, "black");
+
 
 //smile
 // number 1 and 2 are starting position of line (x,y)
