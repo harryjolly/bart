@@ -32,7 +32,7 @@ function drawRightFaceEdge() {
     ctx.lineTo(centerX - 69, centerY + 245); //neck
     ctx.bezierCurveTo(centerX - 55, centerY + 255, centerX - 30, centerY + 260, centerX, centerY + 265); //neck join
 }
-/*Function to duplicate the half of face */
+/*Function to flip the half of face */
 function drawLeftFaceEdge() {
     drawRightFaceEdge();
 	/*translate and flip reverse the canvas
