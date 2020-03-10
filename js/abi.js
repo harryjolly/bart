@@ -11,7 +11,7 @@ ctx.lineCap = 'round';
 ctx.lineWidth = 14;
 ctx.strokeStyle = 'black';
 
-/* Draw the image edges and fill color */
+/* Function to draw the image edges and fill color */
 
 function drawRightFaceEdge() {
     ctx.moveTo(centerX, centerY - 285);
@@ -22,6 +22,7 @@ function drawRightFaceEdge() {
     ctx.lineTo(centerX - 98, centerY - 240);
     ctx.lineTo(centerX - 123, centerY - 256);
     ctx.lineTo(centerX - 130, centerY - 225);
+     //context.bezierCurveTo(cp1x,cp1y,cp2x,cp2y,x,y) REF: https://www.w3schools.com/tags/canvas_beziercurveto.asp
     ctx.bezierCurveTo(centerX - 150, centerY - 240, centerX - 168, centerY - 270, centerX - 160, centerY - 200); //hair curves
     ctx.bezierCurveTo(centerX - 160, centerY - 200, centerX - 150, centerY - 150, centerX - 150, centerY - 80); //hair curves down
     ctx.bezierCurveTo(centerX - 156, centerY - 60, centerX - 162, centerY - 40, centerX - 142, centerY - 20); // eye brow curves
@@ -31,7 +32,7 @@ function drawRightFaceEdge() {
     ctx.lineTo(centerX - 69, centerY + 245); //neck
     ctx.bezierCurveTo(centerX - 55, centerY + 255, centerX - 30, centerY + 260, centerX, centerY + 265); //neck join
 }
-
+/*Function to duplicate the half of face */
 function drawLeftFaceEdge() {
     drawRightFaceEdge();
 	/*translate and flip reverse the canvas
