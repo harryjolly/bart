@@ -30,7 +30,7 @@ function drawRightFaceEdge() {
     ctx.bezierCurveTo(centerX - 174, centerY + 52, centerX - 169, centerY + 109, centerX - 134, centerY + 122); //ear
     ctx.bezierCurveTo(centerX - 134, centerY + 122, centerX - 155, centerY + 170, centerX - 69, centerY + 210); //cheeks
     ctx.lineTo(centerX - 69, centerY + 245); //neck
-    ctx.bezierCurveTo(centerX - 55, centerY + 255, centerX - 30, centerY + 260, centerX, centerY + 265); //neck join
+    ctx.bezierCurveTo(centerX - 55, centerY + 255, centerX - 30, centerY + 260, centerX, centerY + 265); //neck (join)
 }
 /*Function to flip the half of face */
 function drawLeftFaceEdge() {
